@@ -17,6 +17,7 @@ function createDreamTeam(members) {
   //throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
   let dremTeam = "";
+  
   for (let i = 0; i < members.length; i++) {
     if (typeof members[i] === 'string'){
     let j = members[i].replace(/\s/g, '');
@@ -26,7 +27,7 @@ function createDreamTeam(members) {
 
  let newDremTeam = dremTeam.trim().toUpperCase().split("").sort().join('');
 
- if (newDremTeam == "" && typeof newDremTeam !== 'string' && newDremTeam == null) {
+ if ( newDremTeam.length == 0 && typeof newDremTeam !== 'string' && newDremTeam == null) {
   return false;
   }
  return newDremTeam;
